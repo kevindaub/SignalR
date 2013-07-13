@@ -32,6 +32,7 @@ namespace Microsoft.AspNet.SignalR.Client.Http
         public void Dispose()
         {
             Dispose(true);
+            GC.SuppressFinalize(this);
         }
     }
 }

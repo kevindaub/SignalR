@@ -355,6 +355,7 @@ namespace Microsoft.AspNet.SignalR.Transports
         public void Dispose()
         {
             Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
         private static void OnKeepAliveError(AggregateException ex, object state)

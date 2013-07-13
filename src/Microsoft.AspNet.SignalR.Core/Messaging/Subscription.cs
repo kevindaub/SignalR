@@ -313,6 +313,7 @@ namespace Microsoft.AspNet.SignalR.Messaging
         public void Dispose()
         {
             Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
         public abstract void WriteCursor(TextWriter textWriter);

@@ -226,6 +226,7 @@ namespace Microsoft.AspNet.SignalR
         public void Dispose()
         {
             Dispose(true);
+            GC.SuppressFinalize(this);
         }
     }
 }

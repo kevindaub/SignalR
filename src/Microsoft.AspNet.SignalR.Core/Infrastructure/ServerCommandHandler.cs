@@ -116,6 +116,7 @@ namespace Microsoft.AspNet.SignalR.Infrastructure
         public void Dispose()
         {
             Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
         private void ProcessMessages()
